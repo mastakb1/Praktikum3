@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalkulator Sederhana!</title>
+</head>
+<script language="Javascript">
+document.write("Terakhir diubah pada " + document.lastModified);
+function tambah() {
+var bil1 = parseFloat(document.jumlah.bil1.value);
+var bil2 = parseFloat(document.jumlah.bil2.value);
+if (isNaN(bil1) == false && isNaN(bil2) == false) {
+var hasil = bil1 + bil2;
+document.jumlah.hasil.value = hasil;
+} else {
+alert("Inputkan angka !");
+}
+}
+function kurang(bil1, bil2) {
+var bil1 = parseFloat(document.jumlah.bil1.value);
+var bil2 = parseFloat(document.jumlah.bil2.value);
+if (isNaN(bil1) == false && isNaN(bil2) == false) {
+var hasil = bil1 - bil2;
+document.jumlah.hasil.value = hasil;
+} else {
+alert("Inputkan angka !");
+}
+}
+function kali(bil1, bil2) {
+var bil1 = parseFloat(document.jumlah.bil1.value);
+var bil2 = parseFloat(document.jumlah.bil2.value);
+if (isNaN(bil1) == false && isNaN(bil2) == false) {
+var hasil = bil1 * bil2;
+document.jumlah.hasil.value = hasil;
+} else {
+alert("Inputkan angka !");
+}
+}
+function bagi(bil1, bil2) {
+var bil1 = parseFloat(document.jumlah.bil1.value);
+var bil2 = parseFloat(document.jumlah.bil2.value);
+if (isNaN(bil1) == false && isNaN(bil2) == false) {
+var hasil = bil1 / bil2;
+document.jumlah.hasil.value = hasil;
+} else {
+alert("Inputkan angka !");
+}
+}
+</script>
+<body>
+<h1>Program Kalkulator Simple</h1>
+<form name="jumlah">
+<p>Bilangan 1 : <input type="text" name="bil1" size="10" /></p>
+<p>Bilangan 2 : <input type="text" name="bil2" size="10" /></p>
+<input type="BUTTON" value="+" onclick="tambah()" />
+<input type="BUTTON" value="-" onclick="kurang()" />
+<br>
+<input type="BUTTON" value="x" onclick="kali()" />
+<input type="BUTTON" value="/" onclick="bagi()" />
+<br /><br />
+<p>Hasil : <input type="text" name="hasil" size="20" /></p>
+</form>
+</body>
+</html>
